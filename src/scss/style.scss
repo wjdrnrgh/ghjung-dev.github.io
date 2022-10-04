@@ -1,0 +1,25 @@
+//config
+@import "config/_reset.scss";
+@import "config/_variables.scss";
+
+//components
+@import "components/header.scss";
+@import "components/footer.scss";
+
+//defaults
+@font-face {
+  font-family: Pretendard;
+  src: url("font/PretendardVariable.woff2");
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+}
