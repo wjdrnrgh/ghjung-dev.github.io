@@ -34,8 +34,11 @@ const ROUTES = {
     dest: "build/img",
   },
   font: {
-    src: "node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
-    dest: "build/font",
+    src: [
+      "node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+      "node_modules/bootstrap-icons/font/fonts/*",
+    ],
+    dest: "build/fonts",
   },
 };
 
@@ -96,6 +99,11 @@ const font = () => {
   return gulp.src(ROUTES.font.src).pipe(gulp.dest(ROUTES.font.dest));
 };
 
+//deploy
+const deployment = async () => {
+  await gulp.src("build/**/*").pipe(ghpage());
+};
+
 //series
 const prepare = gulp.series([clean]);
 const assets = gulp.series([img, font, pug, scss, js]);
@@ -104,4 +112,4 @@ const liveServer = gulp.parallel([devServer, watch]);
 //scripts
 export const build = gulp.series([prepare, assets]);
 export const dev = gulp.series([build, liveServer]);
-//export const deploy = gulp.series([]);
+export const deploy = gulp.series([build, deployment]);

@@ -1,0 +1,284 @@
+.showing {
+  transform: translate(0, 0%) !important;
+  visibility: visible !important;
+}
+section.mainContents {
+  max-width: 1440px;
+  min-height: 100vh;
+  //margin: 200px auto 0;
+  padding-top: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  div.contents_wrap {
+    min-height: 100vh;
+    position: relative;
+    z-index: 100;
+    div#info {
+      display: flex;
+      flex-direction: column;
+      div#info_box {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        h1#info_main_title {
+          span:not(.point_bg) {
+            font-weight: 900;
+            line-height: 2.5;
+            position: relative;
+          }
+        }
+        h1#info_sub_title {
+          margin-top: 3rem;
+          font-weight: 900;
+          line-height: 2.5;
+          position: relative;
+          font-size: 1.25rem;
+        }
+      }
+      div#photo_box {
+        position: relative;
+        width: 650px;
+        height: 800px;
+        margin-right: auto;
+        background-image: url("/img/it's me.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+        div#introduce_box {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 1rem;
+          h1#introduce {
+            font-size: $pf-font-size-XXL;
+            font-weight: 900;
+            margin-bottom: 1rem;
+          }
+          span {
+            display: inline-block;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+        div#profile_box {
+          position: absolute;
+          border-radius: inherit;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 0 1.25rem;
+          background-color: rgba(0, 0, 0, 0.9);
+          transform: translate(0, 100%);
+          visibility: hidden;
+          transition: transform 0.5s linear, visibility 0.5s linear;
+          div.profile_content {
+            font-weight: 900;
+            line-height: 1.6;
+            h3.profile_title {
+              position: relative;
+              padding-left: 10px;
+              color: $pf-point-color;
+              font-size: 1.75rem;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 10px;
+                background-color: #0f5a8f;
+                transform: rotate(130deg);
+              }
+            }
+            span {
+              display: block;
+              font-size: 1.25rem;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+    div#skills {
+      display: flex;
+      flex-direction: column;
+      padding-top: 200px;
+      div.skills_wrap {
+        width: 50%;
+        min-height: 400px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        h1.skills_title {
+          font-size: $pf-font-size-XL;
+          font-weight: 900;
+          color: #ffffff;
+        }
+        div.between_line {
+          width: 100px;
+          height: 1px;
+          background-color: #fff;
+          margin: 2rem 0;
+        }
+        div.skills_box {
+          display: flex;
+          margin-bottom: 3rem;
+          div.skills_info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 2rem;
+            span.skills_sub_title {
+              font-size: 1.25rem;
+              letter-spacing: 0.5px;
+              margin-bottom: 1.25rem;
+              position: relative;
+              span {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: 0.8rem;
+                font-weight: 900;
+                line-height: 1.1;
+                background-color: $pf-point-color;
+                color: #ffffff;
+                padding: 2.5px 10px;
+                border-radius: 2px;
+              }
+            }
+            span.percent {
+              font-size: 1.25rem;
+              text-align: right;
+              margin-bottom: 5px;
+            }
+            div.progress_bar {
+              height: 6px;
+              width: 100%;
+              background-color: rgba(255, 255, 255, 0.2);
+              position: relative;
+              div.progress_bar_sub {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 6px;
+                background-color: $pf-point-color;
+              }
+            }
+          }
+        }
+      }
+      div#frontSkills,
+      div#deploySkills {
+        margin-left: auto;
+      }
+    }
+    div#works {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 200px;
+      button.slide_btn {
+        all: unset;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        i {
+          font-size: 3rem;
+          color: transparent;
+          -webkit-text-stroke: 2px #fff;
+          opacity: 0.5;
+          transition: opacity 0.2s linear;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      div.works_slide_box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+        input {
+          display: none;
+        }
+        label.works_card {
+          position: absolute;
+          display: inline-block;
+          width: 600px;
+          height: 700px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          padding: 2rem;
+          box-shadow: 0 1px 30px rgba(0, 0, 0, 0.35);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+          h1 {
+            color: black;
+          }
+        }
+        /* Active Slide */
+        input#works1:checked ~ label#works1_card,
+        input#works2:checked ~ label#works2_card,
+        input#works3:checked ~ label#works3_card,
+        input#works4:checked ~ label#works4_card,
+        input#works5:checked ~ label#works5_card {
+          //opacity: 1;
+          z-index: 10;
+          transform: translate3d(0%, 0, 0px) scale(1.1);
+        }
+        /* Next Slide */
+        input#works1:checked ~ label#works2_card,
+        input#works2:checked ~ label#works3_card,
+        input#works3:checked ~ label#works4_card,
+        input#works4:checked ~ label#works5_card,
+        input#works5:checked ~ label#works1_card {
+          //opacity: 0.75;
+          z-index: 9;
+          transform: translate3d(30%, 0, 0) scale(1);
+        }
+        input#works1:checked ~ label#works3_card,
+        input#works2:checked ~ label#works4_card,
+        input#works3:checked ~ label#works5_card,
+        input#works4:checked ~ label#works1_card,
+        input#works5:checked ~ label#works2_card {
+          //opacity: 0.5;
+          z-index: 8;
+          transform: translate3d(55%, 0, 0) scale(0.9);
+        }
+        /* Previous Slide */
+        input#works1:checked ~ label#works5_card,
+        input#works2:checked ~ label#works1_card,
+        input#works3:checked ~ label#works2_card,
+        input#works4:checked ~ label#works3_card,
+        input#works5:checked ~ label#works4_card {
+          //opacity: 0.75;
+          z-index: 9;
+          transform: translate3d(-30%, 0, 0) scale(1);
+        }
+        input#works1:checked ~ label#works4_card,
+        input#works2:checked ~ label#works5_card,
+        input#works3:checked ~ label#works1_card,
+        input#works4:checked ~ label#works2_card,
+        input#works5:checked ~ label#works3_card {
+          //opacity: 0.5;
+          z-index: 8;
+          transform: translate3d(-55%, 0, 0) scale(0.9);
+        }
+      }
+    }
+  }
+  div#contentTitle_box {
+    padding-left: 20px;
+    span#contentTitle {
+      font-size: 200px;
+      font-weight: 900;
+    }
+  }
+}

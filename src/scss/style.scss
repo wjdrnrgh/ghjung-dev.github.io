@@ -1,3 +1,22 @@
+//font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/font/PretendardVariable.woff2") format("woff2");
+}
+//aos
+@import "../../node_modules/aos/src/sass/aos.scss";
+
+//icon
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
 //config
 @import "config/_reset.scss";
 @import "config/_variables.scss";
@@ -5,21 +24,24 @@
 //components
 @import "components/header.scss";
 @import "components/footer.scss";
+@import "components/share.scss";
 
-//defaults
-@font-face {
-  font-family: Pretendard;
-  src: url("font/PretendardVariable.woff2");
-}
+//screens
+@import "screens/mainVisual.scss";
+@import "screens/mainContents.scss";
+
 * {
   box-sizing: border-box;
 }
-a {
-  text-decoration: none;
-}
 body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
+  scroll-behavior: smooth;
+  font-family: "Chosunilbo_myungjo", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  font-size: $pf-font-size-defaults;
+  color: #ffffff;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+  }
 }
