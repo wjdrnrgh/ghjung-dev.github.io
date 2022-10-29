@@ -12,6 +12,7 @@ const handleBtnActive = () => {
   headerIconSecond.style.transform = "rotate(45deg)";
   headerIconSecond.style.bottom = "10px";
   headerMenu.style.transform = "translate3d(0, 0, 0)";
+  headerMenu.style.visibility = "visible";
   headerMenu.style.opacity = "1";
   headerBtn.removeEventListener("click", handleBtnActive);
   headerBtn.addEventListener("click", handleBtnRemove);
@@ -23,6 +24,7 @@ const handleBtnRemove = () => {
   headerIconSecond.style.transform = "";
   headerIconSecond.style.bottom = "";
   headerMenu.style.transform = "";
+  headerMenu.style.visibility = "";
   headerMenu.style.opacity = "";
   headerBtn.removeEventListener("click", handleBtnRemove);
   headerBtn.addEventListener("click", handleBtnActive);

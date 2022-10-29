@@ -47,8 +47,10 @@ header {
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.9);
       transform: translate3d(-100%, 0px, 0px);
+      visibility: hidden;
       opacity: 0;
-      transition: transform 0.3s linear, opacity 0.6s linear;
+      transition: transform 0.3s linear, opacity 0.6s linear,
+        visibility 0.6s linear;
       div.header_menu_inner {
         display: flex;
         align-items: flex-start;
@@ -56,7 +58,7 @@ header {
         height: 100%;
         margin: 0 10rem;
         padding: 10rem 0;
-        ul.menu_list {
+        ul.header_menu_list {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -76,7 +78,7 @@ header {
             }
           }
         }
-        div.contact {
+        div.header_contact_list {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -98,6 +100,79 @@ header {
                     font-size: 2.5rem;
                     display: inline-block;
                     margin-bottom: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    nav {
+      div.header_menu_view {
+        div.header_menu_inner {
+          margin: 0 1rem;
+          justify-content: space-around;
+          ul.header_menu_list {
+            justify-content: center;
+            li {
+              margin-bottom: 1rem;
+              a.menu_item {
+                font-size: 70px;
+              }
+            }
+          }
+          div.header_contact_list {
+            div.contact_item {
+              ul.item_list {
+                li {
+                  a {
+                    font-size: 1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    nav {
+      padding: 0 1rem;
+      div.header_menu_view {
+        div.header_menu_inner {
+          display: flex;
+          flex-direction: column;
+          margin: 0 2rem;
+          padding: 5rem 0;
+          ul.header_menu_list {
+            li {
+              margin-bottom: 1rem;
+              a.menu_item {
+                font-size: 75px;
+              }
+            }
+          }
+          div.header_contact_list {
+            div.contact_item {
+              h3.contact_title {
+                margin: 1rem 0;
+              }
+              ul.item_list {
+                li {
+                  a {
+                    font-size: 1rem;
+                    i {
+                      font-size: 2rem;
+                    }
                   }
                 }
               }

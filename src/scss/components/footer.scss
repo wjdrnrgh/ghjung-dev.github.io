@@ -1,0 +1,25 @@
+footer {
+  div.footer_content {
+    display: flex;
+    height: 150px;
+    background-color: #000000;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    span.footer_copyright {
+      font-size: $pf-font-size-S;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.6;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  footer {
+    div.footer_content {
+      span.footer_copyright {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

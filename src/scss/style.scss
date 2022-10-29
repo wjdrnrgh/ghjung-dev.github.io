@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/font/PretendardVariable.woff2") format("woff2");
+  src: url("../fonts/PretendardVariable.woff2") format("woff2");
 }
 //aos
 @import "../../node_modules/aos/src/sass/aos.scss";
@@ -41,6 +41,9 @@ body {
   font-size: $pf-font-size-defaults;
   color: #ffffff;
   overflow-x: hidden;
+  main {
+    overflow: hidden;
+  }
   a {
     text-decoration: none;
   }

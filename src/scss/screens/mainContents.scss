@@ -5,8 +5,7 @@
 section.mainContents {
   max-width: 1440px;
   min-height: 100vh;
-  //margin: 200px auto 0;
-  padding-top: 200px;
+  padding: 200px 2rem 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -42,7 +41,7 @@ section.mainContents {
         width: 650px;
         height: 800px;
         margin-right: auto;
-        background-image: url("/img/it's me.jpg");
+        background-image: url("../img/it's me.jpg");
         background-position: center;
         background-size: cover;
         border-radius: 10px;
@@ -119,12 +118,6 @@ section.mainContents {
           font-weight: 900;
           color: #ffffff;
         }
-        div.between_line {
-          width: 100px;
-          height: 1px;
-          background-color: #fff;
-          margin: 2rem 0;
-        }
         div.skills_box {
           display: flex;
           margin-bottom: 3rem;
@@ -133,7 +126,7 @@ section.mainContents {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 0 2rem;
+            padding: 0 0 0 2rem;
             span.skills_sub_title {
               font-size: 1.25rem;
               letter-spacing: 0.5px;
@@ -173,8 +166,8 @@ section.mainContents {
           }
         }
       }
-      div#frontSkills,
-      div#deploySkills {
+      div#basic_subSkills,
+      div#backSkills {
         margin-left: auto;
       }
     }
@@ -182,7 +175,8 @@ section.mainContents {
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding-top: 200px;
+      padding: 200px 0;
+      overflow: hidden;
       button.slide_btn {
         all: unset;
         width: 3rem;
@@ -205,15 +199,15 @@ section.mainContents {
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 100vh;
+        height: 600px;
         input {
           display: none;
         }
         label.works_card {
           position: absolute;
           display: inline-block;
-          width: 600px;
-          height: 700px;
+          width: 500px;
+          height: 600px;
           background-color: #ffffff;
           border-radius: 10px;
           padding: 2rem;
@@ -273,12 +267,226 @@ section.mainContents {
         }
       }
     }
+    div#contactMe {
+      display: flex;
+      flex-direction: row;
+      padding: 200px 0 300px 0;
+      div.contact_content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        h1.contact_title {
+          span {
+            line-height: 1.6;
+          }
+        }
+        div.contact_list {
+          dl {
+            margin-bottom: 2rem;
+            font-size: 1.25rem;
+            dt {
+              display: inline-block;
+              margin-bottom: 1rem;
+            }
+            dd {
+              a {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   div#contentTitle_box {
     padding-left: 20px;
     span#contentTitle {
       font-size: 200px;
       font-weight: 900;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  section.mainContents {
+    div.contents_wrap {
+      div#info {
+        div#info_box {
+          margin: 0 auto;
+        }
+        div#photo_box {
+          margin: 0 auto;
+        }
+      }
+      div#skills {
+        div.skills_wrap {
+          width: 100%;
+        }
+      }
+      div#works {
+        button.slide_btn {
+          position: absolute;
+          bottom: 100px;
+        }
+        #prevBtn {
+          left: 40%;
+        }
+        #nextBtn {
+          right: 40%;
+        }
+        div.works_slide_box {
+          height: 500px;
+          label.works_card {
+            width: 400px;
+            height: 500px;
+          }
+        }
+      }
+    }
+    div#contentTitle_box {
+      span#contentTitle {
+        font-size: 170px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section.mainContents {
+    padding: 200px 1rem 0;
+    div.contents_wrap {
+      div#info {
+        div#info_box {
+          h1#info_main_title {
+            font-size: 1.2rem;
+          }
+          h1#info_sub_title {
+            font-size: 1.2rem;
+          }
+        }
+        div#photo_box {
+          width: 500px;
+          height: 650px;
+          div#introduce_box {
+            h1#introduce {
+              font-size: 60px;
+            }
+            span {
+              font-size: 1.2rem;
+            }
+          }
+          div#profile_box {
+            div.profile_content {
+              h3.profile_title {
+                font-size: 1.2rem;
+              }
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    div#contentTitle_box {
+      span#contentTitle {
+        font-size: 120px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  section.mainContents {
+    padding: 200px 1rem 0;
+    div.contents_wrap {
+      div#info {
+        div#info_box {
+          margin: 0 auto;
+          h1#info_main_title {
+            font-size: 0.85rem;
+          }
+          h1#info_sub_title {
+            margin-top: 3rem;
+            font-weight: 900;
+            line-height: 2.5;
+            position: relative;
+            font-size: 0.85rem;
+          }
+        }
+        div#photo_box {
+          width: 350px;
+          height: 500px;
+          margin: 0 auto;
+          overflow: hidden;
+          div#introduce_box {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 1rem;
+            h1#introduce {
+              font-size: 50px;
+              font-weight: 900;
+              margin-bottom: 1rem;
+            }
+            span {
+              display: inline-block;
+              font-size: 1rem;
+              margin-bottom: 0.5rem;
+            }
+          }
+          div#profile_box {
+            div.profile_content {
+              h3.profile_title {
+                font-size: 1rem;
+              }
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+      div#skills {
+        padding-top: 100px;
+        div.skills_wrap {
+          h1.skills_title {
+            font-size: 3rem;
+          }
+        }
+        div#frontSkills,
+        div#deploySkills {
+          margin-left: auto;
+        }
+      }
+      div#works {
+        button.slide_btn {
+          position: absolute;
+          bottom: 100px;
+        }
+        #prevBtn {
+          left: 35%;
+        }
+        #nextBtn {
+          right: 35%;
+        }
+        div.works_slide_box {
+          height: 400px;
+          label.works_card {
+            width: 300px;
+            height: 400px;
+          }
+        }
+      }
+      div#contactMe {
+        div.contact_content {
+          h1.contact_title {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+    div#contentTitle_box {
+      span#contentTitle {
+        font-size: 80px;
+      }
     }
   }
 }

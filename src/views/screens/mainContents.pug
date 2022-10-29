@@ -14,7 +14,7 @@ section.mainContents
                         span.point_bg.point_bg_two
                     br
                     span.infoTitle
-                        |매 순간 최선을 다할 줄 아는 신입 웹 프론트엔드 개발자 정국호입니다.
+                        |매 순간 최선을 다하는 신입 웹 프론트엔드 개발자 정국호입니다.
                         span.point_bg.point_bg_three
                 h1#info_sub_title
                     span 
@@ -36,8 +36,6 @@ section.mainContents
                         |It's Me
                     span#introduce_viewBtn.bottom_bar See More
                 div#profile_box
-                    //div#profile_close_btn
-                        icon.bi-x-circle-fill
                     div.profile_content#profile
                         h3.profile_title Profile
                         span 이름 : 정국호
@@ -76,14 +74,7 @@ section.mainContents
                             span Main
                         span.percent 80%
                         div.progress_bar
-                            div.progress_bar_sub(style="width: 80%")
-                    div.skills_icon#pug   
-                    div.skills_info
-                        span.skills_sub_title PUG    
-                            span Sub
-                        span.percent 60%
-                        div.progress_bar
-                            div.progress_bar_sub(style="width: 60%")                        
+                            div.progress_bar_sub(style="width: 80%")                                             
                 div.skills_box
                     div.skills_icon#css
                     div.skills_info
@@ -91,14 +82,7 @@ section.mainContents
                             span Main
                         span.percent 80%
                         div.progress_bar
-                            div.progress_bar_sub(style="width: 80%")                        
-                    div.skills_icon#sass
-                    div.skills_info
-                        span.skills_sub_title SASS        
-                            span Sub
-                        span.percent 70%
-                        div.progress_bar
-                            div.progress_bar_sub(style="width: 70%")                        
+                            div.progress_bar_sub(style="width: 80%")                                                                        
                 div.skills_box
                     div.skills_icon#js
                     div.skills_info
@@ -106,14 +90,35 @@ section.mainContents
                             span Main       
                         span.percent 65%
                         div.progress_bar
-                            div.progress_bar_sub(style="width: 65%")                         
+                            div.progress_bar_sub(style="width: 65%")                        
+            div.garbage_box_hM                                 
+            div.skills_wrap#basic_subSkills(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="0")            
+                h1.skills_title.font_stroke_opacityN BASIC-SUB
+                div.between_line
+                div.skills_box
+                    div.skills_icon#pug   
+                    div.skills_info
+                        span.skills_sub_title PUG    
+                            span Sub
+                        span.percent 60%
+                        div.progress_bar
+                            div.progress_bar_sub(style="width: 60%")         
+                div.skills_box                
+                    div.skills_icon#sass
+                    div.skills_info
+                        span.skills_sub_title SASS        
+                            span Sub
+                        span.percent 70%
+                        div.progress_bar
+                            div.progress_bar_sub(style="width: 70%")     
+                div.skills_box                     
                     div.skills_icon#es6
                     div.skills_info
                         span.skills_sub_title ES6       
                             span Sub
                         span.percent 50%
                         div.progress_bar
-                            div.progress_bar_sub(style="width: 50%") 
+                            div.progress_bar_sub(style="width: 50%")              
             div.garbage_box_hM                                       
             div.skills_wrap#frontSkills(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="0")
                 h1.skills_title.font_stroke_opacityN FRONT-END
@@ -151,9 +156,9 @@ section.mainContents
                         div.progress_bar
                             div.progress_bar_sub(style="width: 60%")        
                 div.skills_box
-                    div.skills_icon#mongodb
+                    div.skills_icon#mongo
                     div.skills_info
-                        span.skills_sub_title MongoDB       
+                        span.skills_sub_title Mongo     
                         span.percent 50%
                         div.progress_bar
                             div.progress_bar_sub(style="width: 50%")        
@@ -176,10 +181,10 @@ section.mainContents
                 br
                 span 경험 해본 것들.
                     span.point_bg.point_bg_two
-        div#works
+        div#works(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="500")
             button.slide_btn#prevBtn
                 i.bi-caret-left-fill
-            div.works_slide_box(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="500")
+            div.works_slide_box
                 input#works1(type="radio", name="inputRadio" checked)
                 input#works2(type="radio", name="inputRadio")
                 input#works3(type="radio", name="inputRadio")
@@ -197,6 +202,38 @@ section.mainContents
                     h1 CARD5                                        
             button.slide_btn#nextBtn
                 i.bi-caret-right-fill
-    div.contents_wrap
+    div.garbage_box_hL
+    div.contents_wrap#contact
+        div.between_box(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="0")
+            h1.between_title
+                span 포트폴리오를 마치며.
+                    span.point_bg.point_bg_one
+        div#contactMe
+            div.contact_content(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="0")
+                h1.contact_title
+                    span
+                        |우선 저의 포트폴리오를
+                        br
+                        |끝까지 봐주셔서 감사하다는 말씀을 드립니다.
+                        br
+                        |제가 지금까지 진행한 작업들이 마음에 드셨다면,
+                        br
+                        |편하게 연락 주시길 부탁드립니다.
+                div.between_line
+                div.contact_list
+                    dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="500")
+                        dt Email
+                        dd : wjdrnrgh1014@gmail.com
+                    dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="800")
+                        dt Github
+                        dd 
+                            a(href="https://github.com/wjdrnrgh") : https://github.com/wjdrnrgh
+                    dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="1100")
+                        dt Instagram 
+                        dd 
+                            a(href="https://www.instagram.com/jeong_guk_ho") : https://www.instagram.com/jeong_guk_ho
+                    dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="1400")
+                        dt KakaoTalk ID
+                        dd : jgh1014
     div#contentTitle_box
         span#contentTitle.font_stroke_opacity

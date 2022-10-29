@@ -30,6 +30,12 @@
     }
   }
 }
+div.between_line {
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  margin: 3rem 0;
+}
 .font_stroke_opacity {
   color: transparent;
   -webkit-text-stroke: 1px #fff;
@@ -48,7 +54,7 @@
 .fix_active {
   position: fixed;
   left: 0px;
-  top: 725px;
+  bottom: 5px;
 }
 .bottom_bar {
   cursor: pointer;
@@ -82,41 +88,41 @@ div.skills_icon {
   }
 }
 #html {
-  background-image: url("/img/html5.png");
+  background-image: url("../img/html5.png");
 }
 #pug {
-  background-image: url("/img/pug.png");
+  background-image: url("../img/pug.png");
 }
 #css {
-  background-image: url("/img/css3.png");
+  background-image: url("../img/css3.png");
 }
 #sass {
-  background-image: url("/img/sass.png");
+  background-image: url("../img/sass.png");
 }
 #js {
-  background-image: url("/img/js.png");
+  background-image: url("../img/js.png");
 }
 #es6 {
-  background-image: url("/img/es6.png");
+  background-image: url("../img/es6.png");
 }
 #gulp {
-  background-image: url("/img/gulpThumbnail.webp");
+  background-image: url("../img/gulpThumbnail.webp");
 }
 #webpack {
-  background-image: url("/img/webpack.svg");
+  background-image: url("../img/webpack.svg");
   background-color: #ffffff;
 }
 #react {
-  background-image: url("/img/react.png");
+  background-image: url("../img/react.png");
 }
 #nodejs {
-  background-image: url("/img/nodeJS.png");
+  background-image: url("../img/nodeJS.png");
 }
-#mongodb {
-  background-image: url("/img/mongo.png");
+#mongo {
+  background-image: url("../img/mongo.png");
 }
 #heroku {
-  background-image: url("/img/heroku.png");
+  background-image: url("../img/heroku.png");
   background-color: #634987;
 }
 .point_bg {
@@ -153,5 +159,32 @@ div.skills_icon {
   }
   100% {
     width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  div.skills_icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .between_box {
+    .between_title {
+      font-size: 1.5rem;
+    }
+  }
+  .point_bg {
+    position: absolute;
+    top: 10px;
+    z-index: -1;
+    display: block;
+    width: 0%;
+    height: 1rem;
+    background-color: $pf-point-color;
+    transition: width 0.5s linear;
+  }
+  .garbage_box_hM {
+    height: 3.75rem;
+  }
+  .garbage_box_hL {
+    height: 7.5rem;
   }
 }
