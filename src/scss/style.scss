@@ -40,9 +40,13 @@ body {
   letter-spacing: -0.5px;
   font-size: $pf-font-size-defaults;
   color: #ffffff;
-  overflow-x: hidden;
-  main {
-    overflow: hidden;
+  overflow-y: overlay;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $pf-point-color;
+    border-radius: 100px;
   }
   a {
     text-decoration: none;

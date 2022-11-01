@@ -71,7 +71,7 @@ section.mainContents {
           flex-direction: column;
           justify-content: space-around;
           padding: 0 1.25rem;
-          background-color: rgba(0, 0, 0, 0.9);
+          background-color: rgba(0, 0, 0, 0.8);
           transform: translate(0, 100%);
           visibility: hidden;
           transition: transform 0.5s linear, visibility 0.5s linear;
@@ -199,22 +199,140 @@ section.mainContents {
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 600px;
+        height: 500px;
         input {
           display: none;
         }
         label.works_card {
           position: absolute;
           display: inline-block;
-          width: 500px;
-          height: 600px;
-          background-color: #ffffff;
+          width: 700px;
+          height: 500px;
+          perspective: 2000px;
           border-radius: 10px;
-          padding: 2rem;
           box-shadow: 0 1px 30px rgba(0, 0, 0, 0.35);
           transition: opacity 0.5s ease, transform 0.5s ease;
-          h1 {
-            color: black;
+          div.card_flip {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            background-color: #fff;
+            border-radius: inherit;
+            background-position: center center;
+            background-size: cover;
+            transition: transform 0.5s ease;
+            div.card_item {
+              width: 100%;
+              height: 100%;
+              border-radius: inherit;
+              backface-visibility: hidden;
+              padding: 1rem;
+            }
+            div#cardFront {
+              position: absolute;
+              transform: rotateY(0deg);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              background-color: rgba(0, 0, 0, 0.3);
+              div.front_content {
+                opacity: 0;
+                transform: scale(0.1);
+                transition: opacity 0.5s linear, transform 0.5s linear;
+                div.card_title {
+                  h1 {
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 900;
+                    font-size: 100px;
+                    -webkit-text-stroke: 1px rgba(0, 91, 167, 1);
+                    color: rgba(0, 91, 167, 1);
+                    word-break: break-word;
+                    text-align: center;
+                    text-shadow: 0 1px 5px rgb(0 0 0 / 50%);
+                  }
+                }
+                div.card_btn {
+                  display: flex;
+                  padding: 0.5rem 0;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+            div#cardBack {
+              transform: rotateY(-180deg);
+              backdrop-filter: blur(2px);
+              background-color: rgba(0, 0, 0, 0.6);
+              div.back_content {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                div.project_info {
+                  height: 87.5%;
+                  overflow-y: overlay;
+                  padding-right: 5px;
+                  &::-webkit-scrollbar {
+                    width: 5px;
+                  }
+                  &::-webkit-scrollbar-thumb {
+                    background-color: $pf-point-color;
+                    border-radius: 100px;
+                  }
+                  dl {
+                    margin-bottom: 1rem;
+                    dt {
+                      font-weight: 900;
+                      font-size: 1.2rem;
+                      display: inline-block;
+                      padding-bottom: 10px;
+                      position: relative;
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #fff;
+                      }
+                    }
+                    dd {
+                      margin-top: 10px;
+                      font-size: 1.1rem;
+                      ul {
+                        li {
+                          padding-bottom: 5px;
+                        }
+                      }
+                    }
+                  }
+                }
+                div.card_btn {
+                  position: fixed;
+                  display: flex;
+                  align-items: center;
+                  bottom: 0px;
+                  right: 15px;
+                  a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 50%;
+                    i {
+                      color: #fff;
+                      font-size: 1.5rem;
+                    }
+                  }
+                  i.backBtn {
+                    transform: rotateY(-180deg);
+                  }
+                }
+              }
+            }
           }
         }
         /* Active Slide */
@@ -225,7 +343,8 @@ section.mainContents {
         input#works5:checked ~ label#works5_card {
           //opacity: 1;
           z-index: 10;
-          transform: translate3d(0%, 0, 0px) scale(1.1);
+          //box-shadow: 0 1px 30px rgba(0, 91, 167, 0.35);
+          transform: translate3d(0%, 0, 0px) scale(1);
         }
         /* Next Slide */
         input#works1:checked ~ label#works2_card,
@@ -235,7 +354,7 @@ section.mainContents {
         input#works5:checked ~ label#works1_card {
           //opacity: 0.75;
           z-index: 9;
-          transform: translate3d(30%, 0, 0) scale(1);
+          transform: translate3d(25%, 0, 0) scale(0.85);
         }
         input#works1:checked ~ label#works3_card,
         input#works2:checked ~ label#works4_card,
@@ -244,7 +363,7 @@ section.mainContents {
         input#works5:checked ~ label#works2_card {
           //opacity: 0.5;
           z-index: 8;
-          transform: translate3d(55%, 0, 0) scale(0.9);
+          transform: translate3d(45%, 0, 0) scale(0.7);
         }
         /* Previous Slide */
         input#works1:checked ~ label#works5_card,
@@ -254,7 +373,7 @@ section.mainContents {
         input#works5:checked ~ label#works4_card {
           //opacity: 0.75;
           z-index: 9;
-          transform: translate3d(-30%, 0, 0) scale(1);
+          transform: translate3d(-25%, 0, 0) scale(0.85);
         }
         input#works1:checked ~ label#works4_card,
         input#works2:checked ~ label#works5_card,
@@ -263,7 +382,7 @@ section.mainContents {
         input#works5:checked ~ label#works3_card {
           //opacity: 0.5;
           z-index: 8;
-          transform: translate3d(-55%, 0, 0) scale(0.9);
+          transform: translate3d(-45%, 0, 0) scale(0.7);
         }
       }
     }
@@ -334,10 +453,35 @@ section.mainContents {
           right: 40%;
         }
         div.works_slide_box {
-          height: 500px;
+          height: 400px;
           label.works_card {
-            width: 400px;
-            height: 500px;
+            width: 600px;
+            height: 400px;
+            div.card_flip {
+              div#cardFront {
+                div.front_content {
+                  div.card_title {
+                    h1 {
+                      font-size: 80px;
+                    }
+                  }
+                }
+              }
+              div#cardBack {
+                div.back_content {
+                  div.project_info {
+                    dl {
+                      dt {
+                        font-size: 1.1rem;
+                      }
+                      dd {
+                        font-size: 1rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -385,6 +529,50 @@ section.mainContents {
           }
         }
       }
+      div#works {
+        button.slide_btn {
+          position: absolute;
+          bottom: 100px;
+        }
+        #prevBtn {
+          left: 40%;
+        }
+        #nextBtn {
+          right: 40%;
+        }
+        div.works_slide_box {
+          height: 300px;
+          label.works_card {
+            width: 500px;
+            height: 300px;
+            div.card_flip {
+              div#cardFront {
+                div.front_content {
+                  div.card_title {
+                    h1 {
+                      font-size: 60px;
+                    }
+                  }
+                }
+              }
+              div#cardBack {
+                div.back_content {
+                  div.project_info {
+                    dl {
+                      dt {
+                        font-size: 1rem;
+                      }
+                      dd {
+                        font-size: 0.9rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
     div#contentTitle_box {
       span#contentTitle {
@@ -395,7 +583,7 @@ section.mainContents {
 }
 @media screen and (max-width: 480px) {
   section.mainContents {
-    padding: 200px 1rem 0;
+    padding: 200px 0.5rem 0;
     div.contents_wrap {
       div#info {
         div#info_box {
@@ -468,10 +656,35 @@ section.mainContents {
           right: 35%;
         }
         div.works_slide_box {
-          height: 400px;
+          height: 200px;
           label.works_card {
-            width: 300px;
-            height: 400px;
+            width: 350px;
+            height: 200px;
+            div.card_flip {
+              div#cardFront {
+                div.front_content {
+                  div.card_title {
+                    h1 {
+                      font-size: 40px;
+                    }
+                  }
+                }
+              }
+              div#cardBack {
+                div.back_content {
+                  div.project_info {
+                    dl {
+                      dt {
+                        font-size: 0.9rem;
+                      }
+                      dd {
+                        font-size: 0.8rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

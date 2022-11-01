@@ -16,6 +16,10 @@
 .garbage_box_hL {
   height: 15rem;
 }
+.card_active {
+  opacity: 1 !important;
+  transform: scale(1.5) !important;
+}
 .between_box {
   display: flex;
   align-items: center;
@@ -35,6 +39,42 @@ div.between_line {
   height: 1px;
   background-color: #fff;
   margin: 3rem 0;
+}
+i.card_view_btn {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  //border: 2px solid rgba(0, 91, 167, 1);
+  background-color: rgba(0, 91, 167, 1);
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    margin-top: 1px;
+    margin-left: -10px;
+    border-radius: 1px;
+    //background-color: rgba(0, 91, 167, 1);
+    background-color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    border-radius: 1px;
+    margin-top: 1px;
+    //background-color: rgba(0, 91, 167, 1);
+    background-color: #fff;
+    transform: rotate(45deg);
+    transform-origin: top right;
+  }
 }
 .font_stroke_opacity {
   color: transparent;
@@ -86,6 +126,21 @@ div.skills_icon {
   &:hover {
     transform: scale(1.25);
   }
+}
+#portfolioCard {
+  background-image: url("../img/portfolio.png");
+}
+#wetubeCard {
+  background-image: url("../img/wetube.png");
+}
+#paintJsCard {
+  background-image: url("../img/paintjs.png");
+}
+#momentumCard {
+  background-image: url("../img/momentum.png");
+}
+#movieWebCard {
+  background-image: url("../img/movieweb.png");
 }
 #html {
   background-image: url("../img/html5.png");

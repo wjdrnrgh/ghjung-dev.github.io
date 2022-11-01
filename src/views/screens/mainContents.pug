@@ -191,15 +191,204 @@ section.mainContents
                 input#works4(type="radio", name="inputRadio")
                 input#works5(type="radio", name="inputRadio")
                 label.works_card#works1_card(for="works1") 
-                    h1 CARD1
+                    div.card_flip#portfolioCard
+                        div.card_item#cardFront
+                            div.front_content.card_active
+                                div.card_title
+                                    h1 PORTFOLIO
+                                div.card_btn
+                                    i.card_view_btn.frontBtn   
+                        div.card_item#cardBack 
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # 개인 포트폴리오
+                                        dd 프론트엔드 개발자 포트폴리오 웹 사이트입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - 미디어 쿼리를 이용한 반응형 레이아웃
+                                                li - node.js + babel.js + gulp.js 활용하여 프론트 개발 환경 구성
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - node.js
+                                                li - babel.js
+                                                li - gulp.js
+                                                li - javascript(es6)
+                                                li - pug
+                                                li - sass
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 프론트)
+                                div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/wjdrnrgh.github.io") 
+                                        i.bi-github
+                                    a(target="_blank" href="https://wjdrnrgh.github.io") 
+                                        i.bi-house
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn   
                 label.works_card#works2_card(for="works2") 
-                    h1 CARD2
+                    div.card_flip#wetubeCard
+                        div.card_item#cardFront    
+                            div.front_content
+                                div.card_title
+                                    h1 WETUBE
+                                div.card_btn
+                                    i.card_view_btn.frontBtn                           
+                        div.card_item#cardBack                 
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # Youtube 클론
+                                        dd "Youtube"의 주요 기능들을 클론 한 웹 서비스 페이지입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - 미디어 쿼리를 이용한 반응형 레이아웃
+                                                li - mongoDB 및 mongoose 를 이용해 CRUD 기능 구현
+                                                li - 사용자 관련 : 계정 생성 및 인증, 소셜 및 일반 로그인, 프로필 편집
+                                                li - 동영상 관련 : 업로드, 녹화, 검색, 조회수, 시청, 댓글 작성
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - node.js
+                                                li - express.js
+                                                li - webpack.js
+                                                li - javascript(es6)
+                                                li - pug
+                                                li - sass
+                                                li - mongo
+                                                li - heroku
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 풀스택, 배포)
+                                div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/wetube-clone") 
+                                        i.bi-github
+                                    a(target="_blank" href="https://wetube-jgh.herokuapp.com/") 
+                                        i.bi-house
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn                                      
                 label.works_card#works3_card(for="works3") 
-                    h1 CARD3
+                    div.card_flip#paintJsCard
+                        div.card_item#cardFront           
+                            div.front_content
+                                div.card_title
+                                    h1 PaintJS
+                                div.card_btn
+                                    i.card_view_btn.frontBtn                                            
+                        div.card_item#cardBack                         
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # 그림판 어플리케이션
+                                        dd 캔버스 프로퍼티 및 마우스 이벤트를 활용하여 구현한 그림판 웹 사이트입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - 브러쉬 크기 조절
+                                                li - 선 그리기 및 바탕 채우기 모드
+                                                li - 캔버스 초기화
+                                                li - 결과물 저장
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - html
+                                                li - css
+                                                li - javascript(vanilla)
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 프론트)
+                                div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/PaintJS") 
+                                        i.bi-github
+                                    a(target="_blank" href="https://wjdrnrgh.github.io/PaintJS/") 
+                                        i.bi-house
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn                                    
                 label.works_card#works4_card(for="works4") 
-                    h1 CARD4
+                    div.card_flip#momentumCard
+                        div.card_item#cardFront
+                            div.front_content
+                                div.card_title
+                                    h1 MOMENTUM
+                                div.card_btn
+                                    i.card_view_btn.frontBtn                              
+                        div.card_item#cardBack                          
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # Momentum 클론
+                                        dd Chrome App "Momentum"의 주요 기능들을 클론 한 웹 서비스 페이지입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - open API(openweathermap) 를 통해 응답받은 데이터를 기반으로 날씨 정보 표시
+                                                li - 투두 리스트
+                                                li - 시계
+                                                li - 사용자 정보 및 일정 저장(local storage)
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - html
+                                                li - css
+                                                li - javascript(vanilla)
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 프론트)
+                                div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/momentum-clone") 
+                                        i.bi-github
+                                    a(target="_blank" href="https://wjdrnrgh.github.io/momentum-clone/") 
+                                        i.bi-house
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn                           
                 label.works_card#works5_card(for="works5") 
-                    h1 CARD5                                        
+                    div.card_flip#movieWebCard
+                        div.card_item#cardFront
+                            div.front_content
+                                div.card_title
+                                    h1 MOVIEWEB
+                                div.card_btn
+                                    i.card_view_btn.frontBtn                            
+                        div.card_item#cardBack                          
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # 영화 웹 서비스
+                                        dd open API(YTS) 를 통해 응답받은 데이터를 기반으로 각 요소의 값이 표현되는 영화 웹 서비스 페이지입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - flex 기능을 이용한 반응형 레이아웃
+                                                li - 영화 상세정보(제목, 평점, 다운로드 횟수 등)
+                                                li - 영화 다운로드(720p, 1080p)
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - node.js
+                                                li - eact.js
+                                                li - html
+                                                li - css
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 프론트)
+                                div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/Movie-WebService") 
+                                        i.bi-github
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn                           
             button.slide_btn#nextBtn
                 i.bi-caret-right-fill
     div.garbage_box_hL
@@ -227,11 +416,11 @@ section.mainContents
                     dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="800")
                         dt Github
                         dd 
-                            a(href="https://github.com/wjdrnrgh") : https://github.com/wjdrnrgh
+                            a(target="_blank" href="https://github.com/wjdrnrgh") : https://github.com/wjdrnrgh
                     dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="1100")
                         dt Instagram 
                         dd 
-                            a(href="https://www.instagram.com/jeong_guk_ho") : https://www.instagram.com/jeong_guk_ho
+                            a(target="_blank" href="https://www.instagram.com/jeong_guk_ho") : https://www.instagram.com/jeong_guk_ho
                     dl(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1000" data-aos-delay="1400")
                         dt KakaoTalk ID
                         dd : jgh1014
