@@ -160,6 +160,10 @@ div.skills_icon {
 #es6 {
   background-image: url("../img/es6.png");
 }
+#jquery {
+  background-image: url("../img/jquery.png");
+  background-color: #ffffff;
+}
 #gulp {
   background-image: url("../img/gulpThumbnail.webp");
 }
@@ -204,7 +208,7 @@ div.skills_icon {
 }
 .point_bg_animation {
   animation-name: barAnimation;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
