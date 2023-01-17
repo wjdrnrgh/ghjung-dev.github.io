@@ -5,6 +5,8 @@ const worksInput2 = document.getElementById("works2");
 const worksInput3 = document.getElementById("works3");
 const worksInput4 = document.getElementById("works4");
 const worksInput5 = document.getElementById("works5");
+const worksInput6 = document.getElementById("works6");
+const worksInput7 = document.getElementById("works7");
 const inputArr = document.querySelectorAll("input[type=radio]");
 
 const firstCard = document.getElementById("portfolioCard");
@@ -18,6 +20,8 @@ let worksInput2Status = null;
 let worksInput3Status = null;
 let worksInput4Status = null;
 let worksInput5Status = null;
+let worksInput6Status = null;
+let worksInput7Status = null;
 
 const statusCheck = () => {
   worksInput1Status = worksInput1.checked;
@@ -25,6 +29,8 @@ const statusCheck = () => {
   worksInput3Status = worksInput3.checked;
   worksInput4Status = worksInput4.checked;
   worksInput5Status = worksInput5.checked;
+  worksInput6Status = worksInput6.checked;
+  worksInput7Status = worksInput7.checked;
 };
 
 const handleNextBtn = () => {
@@ -47,6 +53,14 @@ const handleNextBtn = () => {
     nextInput = worksInput5;
   }
   if (worksInput5Status) {
+    worksInput6.checked = true;
+    nextInput = worksInput6;
+  }
+  if (worksInput6Status) {
+    worksInput7.checked = true;
+    nextInput = worksInput7;
+  }
+  if (worksInput7Status) {
     worksInput1.checked = true;
     nextInput = worksInput1;
   }
@@ -56,8 +70,8 @@ const handlePrevBtn = () => {
   statusCheck();
   let preInput = null;
   if (worksInput1Status) {
-    worksInput5.checked = true;
-    preInput = worksInput5;
+    worksInput7.checked = true;
+    preInput = worksInput7;
   }
   if (worksInput2Status) {
     worksInput1.checked = true;
@@ -74,6 +88,14 @@ const handlePrevBtn = () => {
   if (worksInput5Status) {
     worksInput4.checked = true;
     preInput = worksInput4;
+  }
+  if (worksInput6Status) {
+    worksInput5.checked = true;
+    preInput = worksInput5;
+  }
+  if (worksInput7Status) {
+    worksInput6.checked = true;
+    preInput = worksInput6;
   }
   handleCardTitle(null, preInput);
 };

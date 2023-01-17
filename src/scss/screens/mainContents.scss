@@ -340,7 +340,9 @@ section.mainContents {
         input#works2:checked ~ label#works2_card,
         input#works3:checked ~ label#works3_card,
         input#works4:checked ~ label#works4_card,
-        input#works5:checked ~ label#works5_card {
+        input#works5:checked ~ label#works5_card,
+        input#works6:checked ~ label#works6_card,
+        input#works7:checked ~ label#works7_card {
           //opacity: 1;
           z-index: 10;
           //box-shadow: 0 1px 30px rgba(0, 91, 167, 0.35);
@@ -351,38 +353,68 @@ section.mainContents {
         input#works2:checked ~ label#works3_card,
         input#works3:checked ~ label#works4_card,
         input#works4:checked ~ label#works5_card,
-        input#works5:checked ~ label#works1_card {
+        input#works5:checked ~ label#works6_card,
+        input#works6:checked ~ label#works7_card,
+        input#works7:checked ~ label#works1_card {
           //opacity: 0.75;
           z-index: 9;
-          transform: translate3d(25%, 0, 0) scale(0.85);
+          transform: translate3d(20%, 0, 0) scale(0.85);
         }
         input#works1:checked ~ label#works3_card,
         input#works2:checked ~ label#works4_card,
         input#works3:checked ~ label#works5_card,
-        input#works4:checked ~ label#works1_card,
-        input#works5:checked ~ label#works2_card {
+        input#works4:checked ~ label#works6_card,
+        input#works5:checked ~ label#works7_card,
+        input#works6:checked ~ label#works1_card,
+        input#works7:checked ~ label#works2_card {
           //opacity: 0.5;
           z-index: 8;
-          transform: translate3d(45%, 0, 0) scale(0.7);
-        }
-        /* Previous Slide */
-        input#works1:checked ~ label#works5_card,
-        input#works2:checked ~ label#works1_card,
-        input#works3:checked ~ label#works2_card,
-        input#works4:checked ~ label#works3_card,
-        input#works5:checked ~ label#works4_card {
-          //opacity: 0.75;
-          z-index: 9;
-          transform: translate3d(-25%, 0, 0) scale(0.85);
+          transform: translate3d(40%, 0, 0) scale(0.7);
         }
         input#works1:checked ~ label#works4_card,
         input#works2:checked ~ label#works5_card,
+        input#works3:checked ~ label#works6_card,
+        input#works4:checked ~ label#works7_card,
+        input#works5:checked ~ label#works1_card,
+        input#works6:checked ~ label#works2_card,
+        input#works7:checked ~ label#works3_card {
+          //opacity: 0.5;
+          z-index: 7;
+          transform: translate3d(60%, 0, 0) scale(0.55);
+        }
+        /* Previous Slide */
+        input#works1:checked ~ label#works7_card,
+        input#works2:checked ~ label#works1_card,
+        input#works3:checked ~ label#works2_card,
+        input#works4:checked ~ label#works3_card,
+        input#works5:checked ~ label#works4_card,
+        input#works6:checked ~ label#works5_card,
+        input#works7:checked ~ label#works6_card {
+          //opacity: 0.75;
+          z-index: 9;
+          transform: translate3d(-20%, 0, 0) scale(0.85);
+        }
+        input#works1:checked ~ label#works6_card,
+        input#works2:checked ~ label#works7_card,
         input#works3:checked ~ label#works1_card,
         input#works4:checked ~ label#works2_card,
-        input#works5:checked ~ label#works3_card {
+        input#works5:checked ~ label#works3_card,
+        input#works6:checked ~ label#works4_card,
+        input#works7:checked ~ label#works5_card {
           //opacity: 0.5;
           z-index: 8;
-          transform: translate3d(-45%, 0, 0) scale(0.7);
+          transform: translate3d(-40%, 0, 0) scale(0.7);
+        }
+        input#works1:checked ~ label#works5_card,
+        input#works2:checked ~ label#works6_card,
+        input#works3:checked ~ label#works7_card,
+        input#works4:checked ~ label#works1_card,
+        input#works5:checked ~ label#works2_card,
+        input#works6:checked ~ label#works3_card,
+        input#works7:checked ~ label#works4_card {
+          //opacity: 0.5;
+          z-index: 7;
+          transform: translate3d(-60%, 0, 0) scale(0.55);
         }
       }
     }

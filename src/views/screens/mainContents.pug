@@ -52,7 +52,6 @@ section.mainContents
                         h3.profile_title Licence
                         span 전자기기 기능사
                         span 웹디자인 기능사
-                        span 정보처리 기능사(필기)
                         span 유비쿼터스 기술 관리사
             div.garbage_box_hL
     div.contents_wrap#mySkills
@@ -149,9 +148,9 @@ section.mainContents
                     div.skills_icon#react
                     div.skills_info
                         span.skills_sub_title React.js
-                        span.percent 40%
+                        span.percent 70%
                         div.progress_bar
-                            div.progress_bar_sub(style="width: 40%")      
+                            div.progress_bar_sub(style="width: 70%")      
             div.garbage_box_hM     
             div.skills_wrap#backSkills(data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="750" data-aos-delay="0")
                 h1.skills_title.font_stroke_opacityN BACK-END
@@ -198,6 +197,8 @@ section.mainContents
                 input#works3(type="radio", name="inputRadio")
                 input#works4(type="radio", name="inputRadio")
                 input#works5(type="radio", name="inputRadio")
+                input#works6(type="radio", name="inputRadio")
+                input#works7(type="radio", name="inputRadio")
                 label.works_card#works1_card(for="works1") 
                     div.card_flip#portfolioCard
                         div.card_item#cardFront
@@ -373,14 +374,55 @@ section.mainContents
                                 div.project_info
                                     dl 
                                         dt # 영화 웹 서비스
-                                        dd open API(YTS) 를 통해 응답받은 데이터를 기반으로 각 요소의 값이 표현되는 영화 웹 서비스 페이지입니다.
+                                        dd open API(YTS) 를 통해 응답받은 데이터를 기반으로 사용자에게 다양한 영화의 정보를 제공하는 영화 웹 서비스 페이지입니다.
                                     dl 
                                         dt # 주요 기능
                                         dd 
                                             ul
-                                                li - flex 기능을 이용한 반응형 레이아웃
+                                                li - 미디어 쿼리를 이용한 반응형 레이아웃
                                                 li - 영화 상세정보(제목, 평점, 다운로드 횟수 등)
                                                 li - 영화 다운로드(720p, 1080p)
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - node.js
+                                                li - react.js
+                                                li - recoil.js
+                                                li - html
+                                                li - css
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 프론트)
+                                div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/NewMovieWeb") 
+                                        i.bi-github
+                                    a(target="_blank" href="https://wjdrnrgh.github.io/NewMovieWeb/") 
+                                        i.bi-house
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn                           
+                label.works_card#works6_card(for="works6") 
+                    div.card_flip#reactDiaryCard
+                        div.card_item#cardFront
+                            div.front_content
+                                div.card_title
+                                    h1 ReactDiary
+                                div.card_btn
+                                    i.card_view_btn.frontBtn                            
+                        div.card_item#cardBack                          
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # 리액트 다이어리
+                                        dd React.js 를 이용하여 간단히 작업한 사용자가 입력한 정보를 기록하는 일기장 웹 서비스 페이지입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - 게시글 작성 기능
+                                                li - 게시글 삭제 기능
+                                                li - 게시글 정렬 기능
+                                                li - 작성 된 게시글을 로컬 스토리지에 저장하여 사용자의 게시글을 유지                                                
                                     dl 
                                         dt # 기술 스택
                                         dd 
@@ -393,10 +435,52 @@ section.mainContents
                                         dt # 개발 참여도
                                         dd 1인 개발(디자인, 퍼블리싱, 프론트)
                                 div.card_btn
+                                    a(target="_blank" href="https://github.com/wjdrnrgh/ReactDiary") 
+                                        i.bi-github
+                                    a(target="_blank" href="https://wjdrnrgh.github.io/ReactDiary/") 
+                                        i.bi-house                                        
+                                    div.garbage_box_wS
+                                    i.card_view_btn.backBtn                           
+                label.works_card#works7_card(for="works7") 
+                    div.card_flip#reactShopCard
+                        div.card_item#cardFront
+                            div.front_content
+                                div.card_title
+                                    h1 ReactShop
+                                div.card_btn
+                                    i.card_view_btn.frontBtn                            
+                        div.card_item#cardBack                          
+                            div.back_content
+                                div.project_info
+                                    dl 
+                                        dt # 신발 쇼핑몰
+                                        dd 임의의 상품 정보 데이터를 기반으로 React.js를 이용하여 작업한 쇼핑몰 웹 서비스 페이지입니다.
+                                    dl 
+                                        dt # 주요 기능
+                                        dd 
+                                            ul
+                                                li - 최근 본 상품 표시
+                                                li - 상품 찜하기 기능
+                                                li - 상품 장바구니 담기 기능
+                                                li - 사용자가 찜 및 장바구니에 담은 상품을 로컬 스토리지에 저장하여 사용자 정보 유지    
+                                    dl 
+                                        dt # 기술 스택
+                                        dd 
+                                            ul
+                                                li - node.js
+                                                li - react.js
+                                                li - redux.js
+                                                li - swiper.js
+                                                li - html
+                                                li - css
+                                    dl 
+                                        dt # 개발 참여도
+                                        dd 1인 개발(디자인, 퍼블리싱, 프론트)
+                                div.card_btn
                                     a(target="_blank" href="https://github.com/wjdrnrgh/Movie-WebService") 
                                         i.bi-github
                                     div.garbage_box_wS
-                                    i.card_view_btn.backBtn                           
+                                    i.card_view_btn.backBtn                                                               
             button.slide_btn#nextBtn
                 i.bi-caret-right-fill
     div.garbage_box_hL
